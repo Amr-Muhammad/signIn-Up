@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(224, 224, 224);
+}
+
+.container {
+    position: relative;
+    width: 75%;
+    height: 500px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+    color: white;
+    overflow: hidden;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgb(13, 13, 44), rgb(38, 38, 78));
+    z-index: 2;
+    transition: all 1s;
+}
+
+.signIn-singUp {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    color: black;
+    z-index: 1;
+}
+
+form h1 {
+    font-size: 45px;
+}
+
+.inputLabelSet {
+    position: relative;
+}
+
+form p a {
+    text-decoration: none;
+    color: gray;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.links a:hover {
+    background-color: white;
+    color: rgb(13, 13, 44);
+    border-color: white;
+    transition: all 0.5s;
+}
+
+input {
+    margin-top: 30px;
+    padding: 10px 42px;
+    outline: none;
+    border: none;
+    background-color: rgb(245, 245, 245);
+}
+
+label {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 50%;
+    background-color: gray;
+    transition: all 0.2s;
+}
+
+input:focus~label {
+    width: 100%;
+    left: 0;
+}
+
+.container p {
+    margin: 15px 0px;
+}
+
+.container button {
+    padding: 10px 32px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: rgb(13, 13, 44);
+    outline: 1px solid white;
+    transition: all 0.2s;
+    color: white;
+}
+
+.panalesContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 3;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 238px;
+    height: 100%;
+    padding: 14px 0px;
+}
+
+img {
+    width: 50%;
+}
+
+.content h2 {
+    font-size: 35px;
+}
+
+.content p {
+    font-size: 20px;
+}
+
+.container button {
+    font-size: 16px;
+}
+
+.container.test::after{
+    left: 50%;
+}
