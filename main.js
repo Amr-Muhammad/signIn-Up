@@ -5,3 +5,7 @@ let container = document.querySelector('.container')
 document.querySelectorAll('button').forEach(el => el.addEventListener('click', () => {
     container.classList.toggle('test')
 }))
+
+document.getElementById('btn').addEventListener('click', () => {
+    console.log('tmam');
+})
